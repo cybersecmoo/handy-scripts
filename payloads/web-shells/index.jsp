@@ -11,7 +11,7 @@
         try {
             Process p = Runtime.getRuntime().exec(username, null, null);
             BufferedReader read = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            while((line = reader.readLine() != null) {
+            while((String line = reader.readLine()) != null) {
                 output += line + "</br>";
             }
         } catch(IOException ex) {
